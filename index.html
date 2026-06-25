@@ -22,7 +22,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=mobile-motion-v1">
+    <link rel="preload" as="image" href="assets/images/wordmark-gualichx.png" fetchpriority="high">
+    <link rel="preload" as="image" href="assets/images/rabbit-gualichx.png" fetchpriority="high">
+    <link rel="preload" as="image" href="assets/images/texture-gualichx-Back.png">
+    <link rel="stylesheet" href="styles.css?v=performance-mobile-v1">
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -230,10 +233,10 @@
       </header>
 
       <section class="cover__content" aria-label="Portada">
-        <img class="hero-rabbit" src="assets/images/rabbit-gualichx.png" alt="">
-        <img class="hero-logo" src="assets/images/wordmark-gualichx.png" alt="Gualichx">
+        <img class="hero-rabbit" src="assets/images/rabbit-gualichx.png" alt="" width="535" height="646" loading="eager" decoding="async" fetchpriority="high">
+        <img class="hero-logo" src="assets/images/wordmark-gualichx.png" alt="Gualichx" width="900" height="325" loading="eager" decoding="async" fetchpriority="high">
         <div class="hero-social-plate">
-          <img class="hero-social-plate__image" src="assets/images/Text transparent.png" alt="Escuchanxs, Miranxs, Seguinxs">
+          <img class="hero-social-plate__image" src="assets/images/Text transparent.png" alt="Escuchanxs, Miranxs, Seguinxs" width="447" height="558" decoding="async">
           <div class="hero-social-plate__links" aria-label="Links sociales destacados">
             <a class="hero-action" href="https://open.spotify.com/artist/0kGaNc0eyyQRi8W1YRvqk8" target="_blank" rel="noopener noreferrer" aria-label="Escuchanos en Spotify">
               <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -278,6 +281,6 @@
       </div>
     </section>
 
-    <script src="script.js?v=mobile-motion-v1"></script>
+    <script src="script.js?v=performance-mobile-v1"></script>
   </body>
 </html>
