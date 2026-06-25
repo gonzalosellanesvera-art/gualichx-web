@@ -52,17 +52,53 @@ body {
 
 .cover::after {
   z-index: 1;
+  inset: 0 -8%;
   background-image: url("assets/images/texture-gualichx-front.png");
-  animation: cover-texture-drift 42s ease-in-out infinite alternate;
+  animation: cover-texture-drift 60s cubic-bezier(0.45, 0, 0.25, 1) infinite;
+  will-change: transform;
 }
 
 @keyframes cover-texture-drift {
-  from {
-    transform: translate3d(-0.35%, -0.25%, 0) scale(1.01);
+  0% {
+    transform: translate3d(5.5%, 0, 0) scale(1.03);
   }
 
-  to {
-    transform: translate3d(0.35%, 0.25%, 0) scale(1.01);
+  20% {
+    transform: translate3d(1.8%, -0.08%, 0) scale(1.03);
+  }
+
+  32%,
+  36% {
+    transform: translate3d(-0.8%, -0.1%, 0) scale(1.03);
+  }
+
+  38% {
+    transform: translate3d(-1.05%, 0.06%, 0) scale(1.031);
+  }
+
+  39% {
+    transform: translate3d(-0.92%, -0.04%, 0) scale(1.03);
+  }
+
+  40% {
+    transform: translate3d(-1.12%, 0.03%, 0) scale(1.031);
+  }
+
+  42% {
+    transform: translate3d(-0.72%, -0.06%, 0) scale(1.03);
+  }
+
+  46%,
+  48% {
+    transform: translate3d(-1.35%, 0, 0) scale(1.03);
+  }
+
+  72% {
+    transform: translate3d(-3.6%, 0.08%, 0) scale(1.03);
+  }
+
+  100% {
+    transform: translate3d(-5.5%, 0, 0) scale(1.03);
   }
 }
 
