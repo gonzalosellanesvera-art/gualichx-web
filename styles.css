@@ -435,7 +435,7 @@ body {
 
 .hero-social-plate {
   --hero-social-icon-size: clamp(42px, 5vw, 64px);
-  --hero-social-icon-gap: clamp(12px, 1.6vw, 22px);
+  --hero-social-icon-gap: clamp(8px, 0.8vw, 18px);
   grid-area: actions;
   width: min(100%, calc(600px - var(--hero-social-icon-size) - var(--hero-social-icon-gap)));
   justify-self: start;
@@ -567,7 +567,7 @@ body {
 
   .hero-social-plate {
     --hero-social-icon-size: clamp(36px, 10vw, 48px);
-    --hero-social-icon-gap: clamp(8px, 2.4vw, 14px);
+    --hero-social-icon-gap: clamp(4px, 1.8vw, 10px);
     width: min(calc(88vw - var(--hero-social-icon-size) - var(--hero-social-icon-gap)), 460px);
   }
 
@@ -602,7 +602,7 @@ body {
 
   .hero-social-plate {
     --hero-social-icon-size: 36px;
-    --hero-social-icon-gap: 8px;
+    --hero-social-icon-gap: 4px;
   }
 
   .hero-action svg {
