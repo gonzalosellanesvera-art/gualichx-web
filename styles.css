@@ -472,7 +472,7 @@ body {
   text-decoration: none;
   opacity: 1;
   position: absolute;
-  left: calc(100% - var(--hero-social-icon-offset));
+  left: calc(100% - var(--hero-social-icon-offset) + clamp(8px, 1vw, 16px));
   transform: translateY(-50%);
   z-index: 4;
   pointer-events: auto;
