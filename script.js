@@ -37,9 +37,10 @@ const rabbit = document.querySelector(".hero-rabbit");
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 if (rabbit && !reducedMotion) {
+  const isMobile = window.matchMedia("(max-width: 700px)").matches;
   const normalState = "none";
-  const firstFlash = "contrast(1.35) brightness(1.12)";
-  const secondFlash = "contrast(0.85) brightness(1.25)";
+  const firstFlash = isMobile ? "contrast(1.42) brightness(1.16)" : "contrast(1.35) brightness(1.12)";
+  const secondFlash = isMobile ? "contrast(0.82) brightness(1.3)" : "contrast(0.85) brightness(1.25)";
 
   const resetRabbit = () => {
     rabbit.style.filter = normalState;
@@ -53,25 +54,27 @@ if (rabbit && !reducedMotion) {
     window.setTimeout(() => {
       rabbit.style.filter = secondFlash;
       rabbit.style.transform = "translate3d(-1px, 1px, 0)";
-    }, 70);
+    }, 80);
 
     window.setTimeout(() => {
       rabbit.style.filter = firstFlash;
       rabbit.style.transform = "translate3d(1px, 0, 0)";
-    }, 135);
+    }, 155);
 
-    window.setTimeout(resetRabbit, 210);
+    window.setTimeout(resetRabbit, 240);
   };
 
-  const scheduleRabbitMoment = () => {
-    const nextDelay = 26000 + Math.random() * 22000;
-
+  const scheduleRabbitMoment = (delay) => {
     window.setTimeout(() => {
       runRabbitMoment();
-      scheduleRabbitMoment();
-    }, nextDelay);
+      const nextDelay = 24000 + Math.random() * 24000;
+
+      scheduleRabbitMoment(nextDelay);
+    }, delay);
   };
 
+  const firstDelay = 4000 + Math.random() * 4000;
+
   rabbit.style.transition = "filter 40ms steps(1), transform 40ms steps(1)";
-  scheduleRabbitMoment();
+  scheduleRabbitMoment(firstDelay);
 }

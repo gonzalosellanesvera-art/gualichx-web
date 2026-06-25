@@ -125,11 +125,33 @@ body {
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .cover::after {
-    animation: none;
+
+@keyframes cover-texture-drift-mobile {
+  0% {
+    transform: translate3d(6%, -0.12%, 0) scale(1.03);
+  }
+
+  18% {
+    transform: translate3d(3.85%, 0.24%, 0) scale(1.038);
+  }
+
+  38% {
+    transform: translate3d(1.05%, -0.35%, 0) scale(1.045);
+  }
+
+  58% {
+    transform: translate3d(-1.7%, 0.28%, 0) scale(1.04);
+  }
+
+  78% {
+    transform: translate3d(-4.25%, -0.22%, 0) scale(1.044);
+  }
+
+  100% {
+    transform: translate3d(-6%, 0.12%, 0) scale(1.03);
   }
 }
+
 
 .hero-header {
   position: relative;
@@ -573,6 +595,12 @@ body {
     padding: calc(14px + env(safe-area-inset-top)) clamp(16px, 5vw, 24px) calc(18px + env(safe-area-inset-bottom));
   }
 
+  .cover::after {
+    animation-name: cover-texture-drift-mobile;
+    animation-duration: 53s;
+    will-change: transform;
+  }
+
   .cover__content {
     justify-content: flex-start;
     align-content: start;
@@ -631,5 +659,11 @@ body {
   .hero-action svg {
     width: 30px;
     height: 30px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cover::after {
+    animation: none;
   }
 }
