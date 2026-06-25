@@ -24,19 +24,57 @@ body {
 }
 
 .cover {
+  position: relative;
+  isolation: isolate;
   min-height: 100svh;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   padding: calc(16px + env(safe-area-inset-top)) clamp(16px, 4vw, 64px) calc(20px + env(safe-area-inset-bottom));
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.34)),
-    url("assets/images/texture-gualichx.png") center / cover repeat,
-    var(--background);
+  background: #000;
+}
+
+.cover::before,
+.cover::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-position: center;
+  background-size: cover;
+  background-repeat: repeat;
+}
+
+.cover::before {
+  z-index: 0;
+  background-image: url("assets/images/texture-gualichx-Back.png");
+}
+
+.cover::after {
+  z-index: 1;
+  background-image: url("assets/images/texture-gualichx-front.png");
+  animation: cover-texture-drift 42s ease-in-out infinite alternate;
+}
+
+@keyframes cover-texture-drift {
+  from {
+    transform: translate3d(-0.35%, -0.25%, 0) scale(1.01);
+  }
+
+  to {
+    transform: translate3d(0.35%, 0.25%, 0) scale(1.01);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cover::after {
+    animation: none;
+  }
 }
 
 .hero-header {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -113,6 +151,8 @@ body {
 }
 
 .cover__content {
+  position: relative;
+  z-index: 2;
   flex: 1;
   width: 100%;
   min-height: 0;
