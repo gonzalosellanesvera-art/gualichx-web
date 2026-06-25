@@ -154,13 +154,15 @@ body {
 
 
 .hero-header {
-  position: relative;
-  z-index: 3;
-  display: flex;
+  position: fixed;
+  top: calc(16px + env(safe-area-inset-top));
+  right: calc(16px + env(safe-area-inset-right));
+  z-index: 30;
+  display: inline-flex;
   align-items: center;
   justify-content: flex-end;
   gap: 24px;
-  width: 100%;
+  width: auto;
 }
 
 .hero-logo,
@@ -699,6 +701,11 @@ body {
 }
 
 @media (max-width: 700px) {
+  .hero-header {
+    top: calc(12px + env(safe-area-inset-top));
+    right: calc(12px + env(safe-area-inset-right));
+  }
+
   .cover {
     padding: calc(14px + env(safe-area-inset-top)) clamp(16px, 5vw, 24px) calc(18px + env(safe-area-inset-bottom));
   }
