@@ -436,6 +436,7 @@ body {
 .hero-social-plate {
   --hero-social-icon-size: clamp(42px, 5vw, 64px);
   --hero-social-icon-gap: clamp(8px, 0.8vw, 18px);
+  --hero-social-icon-offset: clamp(18px, 3vw, 42px);
   grid-area: actions;
   width: min(100%, calc(600px - var(--hero-social-icon-size) - var(--hero-social-icon-gap)));
   justify-self: start;
@@ -471,7 +472,7 @@ body {
   text-decoration: none;
   opacity: 1;
   position: absolute;
-  left: calc(100% + var(--hero-social-icon-gap));
+  left: calc(100% - var(--hero-social-icon-offset));
   transform: translateY(-50%);
   z-index: 4;
   pointer-events: auto;
