@@ -23,4 +23,12 @@ if (menuToggle && heroMenu) {
       setMenuOpen(false);
     }
   });
+
+  heroMenu.addEventListener("click", (event) => {
+    const menuLink = event.target.closest("a");
+
+    if (menuLink?.hash) {
+      setMenuOpen(false);
+    }
+  });
 }
