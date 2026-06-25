@@ -3,13 +3,29 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Gualichx es una banda uruguaya de punk rock melódico formada en Montevideo en 2022. Ruido, melodía y una estética cruda desde el margen.">
+    <link rel="canonical" href="https://jrrguille-bit.github.io/gualichx-webV2/">
+    <meta property="og:title" content="Gualichx">
+    <meta property="og:description" content="Gualichx es una banda uruguaya de punk rock melódico formada en Montevideo en 2022. Ruido, melodía y una estética cruda desde el margen.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jrrguille-bit.github.io/gualichx-webV2/">
+    <meta property="og:image" content="https://jrrguille-bit.github.io/gualichx-webV2/assets/images/hero-gualichx.png">
+    <meta property="og:site_name" content="Gualichx">
+    <meta property="og:locale" content="es_UY">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Gualichx">
+    <meta name="twitter:description" content="Gualichx es una banda uruguaya de punk rock melódico formada en Montevideo en 2022. Ruido, melodía y una estética cruda desde el margen.">
+    <meta name="twitter:image" content="https://jrrguille-bit.github.io/gualichx-webV2/assets/images/hero-gualichx.png">
     <title>Gualichx</title>
     <link rel="icon" type="image/png" href="assets/images/rabbit-gualichx.png">
     <link rel="apple-touch-icon" href="assets/images/rabbit-gualichx.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=mobile-motion-v1">
+    <link rel="preload" as="image" href="assets/images/wordmark-gualichx.png" fetchpriority="high">
+    <link rel="preload" as="image" href="assets/images/rabbit-gualichx.png" fetchpriority="high">
+    <link rel="preload" as="image" href="assets/images/texture-gualichx-Back.png">
+    <link rel="stylesheet" href="styles.css?v=floating-menu-v2">
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -199,28 +215,28 @@
 </script>
   </head>
   <body>
-    <main class="cover">
-      <header class="hero-header">
-        <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="hero-menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-        <nav class="hero-menu" id="hero-menu" aria-label="Menú principal">
-          <a href="https://open.spotify.com/artist/0kGaNc0eyyQRi8W1YRvqk8" target="_blank" rel="noopener noreferrer">Spotify</a>
-          <a href="https://youtu.be/DMM1JovKw80" target="_blank" rel="noopener noreferrer">YouTube</a>
-          <a href="https://www.instagram.com/gualichx.uy/" target="_blank" rel="noopener noreferrer">Instagram</a>
-          <a href="https://music.apple.com/us/artist/gualichx/1717864742" target="_blank" rel="noopener noreferrer">Apple Music</a>
-          <a href="#proximas-fechas">Próximas fechas</a>
-          <a href="#sobre-nosotros">Sobre nosotros</a>
-        </nav>
-      </header>
+    <header class="hero-header">
+      <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="hero-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="hero-menu" id="hero-menu" aria-label="Menú principal">
+        <a href="https://open.spotify.com/artist/0kGaNc0eyyQRi8W1YRvqk8" target="_blank" rel="noopener noreferrer">Spotify</a>
+        <a href="https://youtu.be/DMM1JovKw80" target="_blank" rel="noopener noreferrer">YouTube</a>
+        <a href="https://www.instagram.com/gualichx.uy/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://music.apple.com/us/artist/gualichx/1717864742" target="_blank" rel="noopener noreferrer">Apple Music</a>
+        <a href="#proximas-fechas">Próximas fechas</a>
+        <a href="#sobre-nosotros">Sobre nosotros</a>
+      </nav>
+    </header>
 
+    <main class="cover">
       <section class="cover__content" aria-label="Portada">
-        <img class="hero-rabbit" src="assets/images/rabbit-gualichx.png" alt="">
-        <img class="hero-logo" src="assets/images/wordmark-gualichx.png" alt="Gualichx">
+        <img class="hero-rabbit" src="assets/images/rabbit-gualichx.png" alt="" width="535" height="646" loading="eager" decoding="async" fetchpriority="high">
+        <img class="hero-logo" src="assets/images/wordmark-gualichx.png" alt="Gualichx" width="900" height="325" loading="eager" decoding="async" fetchpriority="high">
         <div class="hero-social-plate">
-          <img class="hero-social-plate__image" src="assets/images/Text transparent.png" alt="Escuchanxs, Miranxs, Seguinxs">
+          <img class="hero-social-plate__image" src="assets/images/Text transparent.png" alt="Escuchanxs, Miranxs, Seguinxs" width="447" height="558" decoding="async">
           <div class="hero-social-plate__links" aria-label="Links sociales destacados">
             <a class="hero-action" href="https://open.spotify.com/artist/0kGaNc0eyyQRi8W1YRvqk8" target="_blank" rel="noopener noreferrer" aria-label="Escuchanos en Spotify">
               <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -265,6 +281,19 @@
       </div>
     </section>
 
-    <script src="script.js?v=mobile-motion-v1"></script>
+    <footer class="site-footer" aria-label="Pie de página">
+      <div class="site-footer__inner">
+        <p class="site-footer__brand">GUALICHX</p>
+        <p class="site-footer__place">Montevideo, Uruguay</p>
+        <nav class="site-footer__links" aria-label="Links de Gualichx">
+          <a class="site-footer__link" href="https://www.instagram.com/gualichx.uy/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a class="site-footer__link" href="https://open.spotify.com/artist/0kGaNc0eyyQRi8W1YRvqk8" target="_blank" rel="noopener noreferrer">Spotify</a>
+          <a class="site-footer__link" href="https://youtu.be/DMM1JovKw80" target="_blank" rel="noopener noreferrer">YouTube</a>
+          <a class="site-footer__link" href="mailto:gualichx@gmail.com">gualichx@gmail.com</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="script.js?v=performance-mobile-v1"></script>
   </body>
 </html>
