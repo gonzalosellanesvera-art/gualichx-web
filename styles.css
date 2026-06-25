@@ -152,35 +152,45 @@ body {
   width: min(100%, 560px);
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  align-items: flex-start;
+  gap: clamp(14px, 2vw, 24px);
   justify-self: start;
 }
 
 .hero-action {
-  min-height: 66px;
-  display: grid;
-  grid-template-columns: 58px 1fr;
+  width: max-content;
+  max-width: 100%;
+  display: inline-flex;
   align-items: center;
-  padding: 0 28px;
-  border: 1px solid rgba(242, 242, 242, 0.92);
+  justify-content: flex-start;
+  gap: clamp(12px, 1.5vw, 20px);
+  padding: 0;
+  border: 0;
   color: var(--foreground);
-  background: rgba(0, 0, 0, 0.34);
+  background: transparent;
   text-decoration: none;
-  font-size: clamp(20px, 2vw, 32px);
+  font-size: clamp(22px, 2.1vw, 34px);
   font-weight: 800;
-  letter-spacing: 0;
+  line-height: 1;
+  letter-spacing: 0.015em;
+  text-shadow: 0 0 18px rgba(0, 0, 0, 0.82);
+  transition: opacity 160ms ease, transform 160ms ease;
+}
+
+.hero-action:hover {
+  opacity: 0.78;
+  transform: translateX(4px);
 }
 
 .hero-action svg {
-  width: 34px;
-  height: 34px;
+  width: clamp(34px, 3vw, 48px);
+  height: clamp(34px, 3vw, 48px);
   display: block;
-  justify-self: center;
+  flex: 0 0 auto;
   fill: currentColor;
 }
 
 .hero-action span {
-  justify-self: center;
   white-space: nowrap;
 }
 
@@ -208,6 +218,11 @@ body {
     justify-self: center;
   }
 
+  .hero-actions {
+    width: min(78vw, 520px);
+    align-items: center;
+  }
+
   .hero-rabbit {
     width: min(54vw, 440px);
   }
@@ -216,8 +231,8 @@ body {
     width: min(70vw, 560px);
   }
 
-  .hero-actions {
-    width: min(78vw, 520px);
+  .hero-action {
+    justify-content: center;
   }
 }
 
@@ -251,10 +266,12 @@ body {
   }
 
   .hero-action {
-    min-height: 64px;
-    grid-template-columns: 58px 1fr;
-    padding: 0 22px;
-    font-size: clamp(22px, 7vw, 32px);
+    font-size: clamp(20px, 6.4vw, 30px);
+  }
+
+  .hero-action svg {
+    width: clamp(30px, 8vw, 38px);
+    height: clamp(30px, 8vw, 38px);
   }
 }
 
@@ -273,11 +290,15 @@ body {
   }
 
   .hero-actions {
-    gap: 8px;
+    gap: 10px;
   }
 
   .hero-action {
-    min-height: 48px;
     font-size: 20px;
+  }
+
+  .hero-action svg {
+    width: 30px;
+    height: 30px;
   }
 }
